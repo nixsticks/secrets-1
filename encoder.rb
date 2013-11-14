@@ -1,17 +1,19 @@
 secret = "There's money in the banana stand."
-puts secret.downcase!
+puts secret.downcase
 
-step_1 = secret.reverse!
+step_1 = secret.reverse
 puts step_1
 
-step_2 = step_1.gsub!("a", "1a1")
+step_2 = step_1.gsub("a", "1a1")
 puts step_2
 
-step_3 = step_2.gsub!("b", "1a0")
+step_3 = step_2.gsub("b", "1a0")
 puts step_3
 
-step_4 = step_3.gsub!("c", "0a1")
+step_4 = step_3.gsub("c", "0a1")
 puts step_4
+
+# NOTE: I removed the bang operators from gsub because the results were already being stored in a variable; also, I think gsub! returns nil if there is no match. -- Nikki
 
 =begin
 step_5 = step_4.gsub!("d", "0a0")
